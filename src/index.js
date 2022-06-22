@@ -40,3 +40,18 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+// Declaring Variables
+const nav = document.querySelector('nav')
+cons navLinks = document.querySelector('nav a')
+const logo = document.querySelector('.logo')
+const title = document.querySelector('.cta-text h1')
+const bigBtn = document.querySelector('.cta-text button')
+const codeImg = document.querySelector('.cta-img')
+const mainContentHeaders = document.querySelector('.text-content h4')
+const mainContentP = document.querySelector('.text-content p')
+const 
+const middleImg = document.querySelector('.middle-img')
+const contactHeader = document.querySelector('.contact h4')
+const contactP = document.querySelector('.content p')
+const footerLink = document.querySelector('footer a')
