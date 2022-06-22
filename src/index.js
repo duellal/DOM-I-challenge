@@ -53,16 +53,22 @@ const navContact = document.querySelectorAll('nav a')[5]
 const logo = document.querySelector('.logo')
 const title = document.querySelector('.cta-text h1')
 const bigBtn = document.querySelector('.cta-text button')
-const codeImg = document.querySelector('.cta-img')
+const codeImg = document.querySelector('#cta-img')
 const featureHeader = document.querySelectorAll('.top-content .text-content h4')[0]
+const featureP = document.querySelectorAll('.top-content .text-content p')[0]
 const aboutHeader = document.querySelectorAll('.top-content .text-content h4')[1]
+const aboutP = document.querySelectorAll('.top-content .text-content p')[1]
 const servicesHeader = document.querySelectorAll('.bottom-content .text-content h4')[0]
+const servicesP = document.querySelectorAll('.bottom-content .text-content p')[0]
 const productHeader = document.querySelectorAll('.bottom-content .text-content h4')[1]
+const productP = document.querySelectorAll('.bottom-content .text-content p')[1]
 const visionHeader = document.querySelectorAll('.bottom-content .text-content h4')[2]
-const featureP = document.querySelectorAll('.top-content.text-content p')[0]
+const visionP = document.querySelectorAll('.bottom-content .text-content p')[2]
 const middleImg = document.querySelector('.middle-img')
 const contactHeader = document.querySelector('.contact h4')
-const contactP = document.querySelector('.content p')
+const contactStreet = document.querySelectorAll('.contact p')[0]
+const contactPhone = document.querySelectorAll('.contact p')[1]
+const contactEmail = document.querySelectorAll('.contact p')[2]
 const footerLink = document.querySelector('footer a')
 
 // Adding Text 
@@ -83,9 +89,29 @@ navContact.textContent = 'Contact'
 title.textContent = 'DOM Is Awesome'
 bigBtn.textContent = 'Get Started'
 
+//Add images
+logo.src = 'http://localhost:5500/mocks/img/logo.png'
+codeImg.src = 'http://localhost:5500/mocks/img/cta.png'
+middleImg.src = 'http://localhost:5500/mocks/img/accent.png'
+
 //Adding Text to main-content area
 featureHeader.textContent = 'Features'
+featureP.textContent = 'eatures content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
 aboutHeader.textContent = 'About'
+aboutP.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 servicesHeader.textContent = 'Services'
+servicesP.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 productHeader.textContent = 'Product'
+productP.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 visionHeader.textContent = 'Vision'
+visionP.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+
+// Add text to footer
+contactHeader.textContent = 'Contact'
+contactStreet.textContent = '123 Way 456 Street Somewhere, USA'
+contactPhone.textContent = '1 (888) 999-9999'
+contactEmail.textContent = 'sales@greatidea.io'
+
+//Adding text and class to footer
+footerLink.classList.add('bold')
+footerLink.textContent = 'Copyright Great Idea! 2022'
