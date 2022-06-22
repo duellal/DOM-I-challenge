@@ -54,7 +54,6 @@ const logo = document.querySelector('.logo')
 const title = document.querySelector('.cta-text h1')
 const bigBtn = document.querySelector('.cta-text button')
 const codeImg = document.querySelector('#cta-img')
-const topContentP = document.querySelector('.top-content .text-content')
 const featureHeader = document.querySelectorAll('.top-content .text-content h4')[0]
 const featureP = document.querySelectorAll('.top-content .text-content p')[0]
 const aboutHeader = document.querySelectorAll('.top-content .text-content h4')[1]
@@ -118,4 +117,5 @@ footerLink.classList.add('bold')
 footerLink.textContent = 'Copyright Great Idea! 2022'
 
 //Styling Features and About to make paragraphs more spaced out like in the design file
-topContentP.style.paddingRight = '20px'
+// topContentP.style.paddingRight = '20px'
+featureP.style.padding = '0px 10px 0px 0px'
