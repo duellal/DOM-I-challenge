@@ -96,15 +96,15 @@ middleImg.src = 'http://localhost:5500/mocks/img/accent.png'
 
 //Adding Text to main-content area
 featureHeader.textContent = 'Features'
-featureP.textContent = 'eatures content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
+featureP.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
 aboutHeader.textContent = 'About'
-aboutP.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+aboutP.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 servicesHeader.textContent = 'Services'
 servicesP.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 productHeader.textContent = 'Product'
-productP.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+productP.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 visionHeader.textContent = 'Vision'
-visionP.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+visionP.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
 
 // Add text to footer
 contactHeader.textContent = 'Contact'
@@ -118,4 +118,4 @@ footerLink.textContent = 'Copyright Great Idea! 2022'
 
 //Styling Features and About to make paragraphs more spaced out like in the design file
 // topContentP.style.paddingRight = '20px'
-featureP.style.padding = '0px 10px 0px 0px'
+featureP.style.padding = '0px 30px 0px 0px'
