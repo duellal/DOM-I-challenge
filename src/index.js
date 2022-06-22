@@ -42,16 +42,50 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 console.log('project wired!')
 
 // Declaring Variables
-const nav = document.querySelector('nav')
-cons navLinks = document.querySelector('nav a')
+const nav = document.querySelectorAll('nav')
+const navLinks = document.querySelectorAll('nav a')
+const navServices = document.querySelectorAll('nav a')[0]
+const navProduct = document.querySelectorAll('nav a')[1]
+const navVision = document.querySelectorAll('nav a')[2]
+const navFeatures = document.querySelectorAll('nav a')[3]
+const navAbout = document.querySelectorAll('nav a')[4]
+const navContact = document.querySelectorAll('nav a')[5]
 const logo = document.querySelector('.logo')
 const title = document.querySelector('.cta-text h1')
 const bigBtn = document.querySelector('.cta-text button')
 const codeImg = document.querySelector('.cta-img')
-const mainContentHeaders = document.querySelector('.text-content h4')
-const mainContentP = document.querySelector('.text-content p')
-const 
+const featureHeader = document.querySelectorAll('.top-content .text-content h4')[0]
+const aboutHeader = document.querySelectorAll('.top-content .text-content h4')[1]
+const servicesHeader = document.querySelectorAll('.bottom-content .text-content h4')[0]
+const productHeader = document.querySelectorAll('.bottom-content .text-content h4')[1]
+const visionHeader = document.querySelectorAll('.bottom-content .text-content h4')[2]
+const featureP = document.querySelectorAll('.top-content.text-content p')[0]
 const middleImg = document.querySelector('.middle-img')
 const contactHeader = document.querySelector('.contact h4')
 const contactP = document.querySelector('.content p')
 const footerLink = document.querySelector('footer a')
+
+// Adding Text 
+// Adding Class to nav
+for(let i=0; i < navLinks.length; i++){
+  navLinks[i].className = 'italic'
+}
+
+// Adding Text to Navigation
+navServices.textContent = 'Services'
+navProduct.textContent = 'Product'
+navVision.textContent = 'Vision'
+navFeatures.textContent = 'Features'
+navAbout.textContent = 'About'
+navContact.textContent = 'Contact'
+
+//Adding Text to CTA section
+title.textContent = 'DOM Is Awesome'
+bigBtn.textContent = 'Get Started'
+
+//Adding Text to main-content area
+featureHeader.textContent = 'Features'
+aboutHeader.textContent = 'About'
+servicesHeader.textContent = 'Services'
+productHeader.textContent = 'Product'
+visionHeader.textContent = 'Vision'
