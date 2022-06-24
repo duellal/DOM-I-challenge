@@ -42,21 +42,13 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 console.log('project wired!')
 
 // Declaring Variables
-const nav = document.querySelectorAll('nav')
 const navLinks = document.querySelectorAll('nav a')
-// Delete once aNavLinkArray and navLinks are doing what these did
-//const navServices = document.querySelectorAll('nav a')[0]
-// const navProduct = document.querySelectorAll('nav a')[1]
-// const navVision = document.querySelectorAll('nav a')[2]
-// const navFeatures = document.querySelectorAll('nav a')[3]
-// const navAbout = document.querySelectorAll('nav a')[4]
-// const navContact = document.querySelectorAll('nav a')[5]
-// Via Jessica's comment on previous pull
 const aNavLinkArray = Object.values(siteContent.nav)
 
 const logo = document.querySelector('.logo')
 const title = document.querySelector('.cta-text h1')
 const bigBtn = document.querySelector('.cta-text button')
+
 const codeImg = document.querySelector('#cta-img')
 
 const mainContent = document.querySelectorAll('.text-content h4, .text-content p')
@@ -69,14 +61,10 @@ const contactArray = Object.values(siteContent.contact)
 const footerLink = document.querySelector('footer a')
 
 // Adding Text 
-// Adding Class to nav
-for(let i=0; i < navLinks.length; i++){
-  navLinks[i].className = 'italic'
-}
-
-// Adding Text to Navigation
+// Adding Text and Class to Nav
 navLinks.forEach(function (element, index) {
   element.textContent = aNavLinkArray[index];
+  navLinks[index].className = 'italic';
 })
 
 //Adding Text to CTA section
@@ -84,9 +72,10 @@ title.textContent = Object.values(siteContent.cta)[0]
 bigBtn.textContent = siteContent.cta.button
 
 //Add images
-logo.src = 'http://localhost:5500/mocks/img/logo.png'
-codeImg.src = 'http://localhost:5500/mocks/img/cta.png'
-middleImg.src = 'http://localhost:5500/mocks/img/accent.png'
+// Images are not rendering, trying 3 different ways - error: GET http://localhost:9000/img/logo.png net::ERR_CONNECTION_REFUSED
+logo.src = siteContent['images']["logo-img"]
+codeImg.src = siteContent.images["cta-img"]
+middleImg.src = Object.values(siteContent.images)[2]
 
 //Adding Text to main-content area
 mainContent.forEach(function(element, index){
@@ -94,15 +83,10 @@ mainContent.forEach(function(element, index){
 })
 
 // Add text to footer
-contactHeader.textContent = 'Contact'
-contactStreet.textContent = '123 Way 456 Street Somewhere, USA'
-contactPhone.textContent = '1 (888) 999-9999'
-contactEmail.textContent = 'sales@greatidea.io'
+contact.forEach((element, index) => {
+  element.textContent = contactArray[index];
+})
 
 //Adding text and class to footer
 footerLink.classList.add('bold')
 footerLink.textContent = 'Copyright Great Idea! 2022'
-
-//Styling Features and About to make paragraphs more spaced out like in the design file
-// topContentP.style.paddingRight = '20px'
-featureP.style.padding = '0px 30px 0px 0px'
