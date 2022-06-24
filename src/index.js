@@ -44,31 +44,28 @@ console.log('project wired!')
 // Declaring Variables
 const nav = document.querySelectorAll('nav')
 const navLinks = document.querySelectorAll('nav a')
-const navServices = document.querySelectorAll('nav a')[0]
-const navProduct = document.querySelectorAll('nav a')[1]
-const navVision = document.querySelectorAll('nav a')[2]
-const navFeatures = document.querySelectorAll('nav a')[3]
-const navAbout = document.querySelectorAll('nav a')[4]
-const navContact = document.querySelectorAll('nav a')[5]
+// Delete once aNavLinkArray and navLinks are doing what these did
+//const navServices = document.querySelectorAll('nav a')[0]
+// const navProduct = document.querySelectorAll('nav a')[1]
+// const navVision = document.querySelectorAll('nav a')[2]
+// const navFeatures = document.querySelectorAll('nav a')[3]
+// const navAbout = document.querySelectorAll('nav a')[4]
+// const navContact = document.querySelectorAll('nav a')[5]
+// Via Jessica's comment on previous pull
+const aNavLinkArray = Object.values(siteContent.nav)
+
 const logo = document.querySelector('.logo')
 const title = document.querySelector('.cta-text h1')
 const bigBtn = document.querySelector('.cta-text button')
 const codeImg = document.querySelector('#cta-img')
-const featureHeader = document.querySelectorAll('.top-content .text-content h4')[0]
-const featureP = document.querySelectorAll('.top-content .text-content p')[0]
-const aboutHeader = document.querySelectorAll('.top-content .text-content h4')[1]
-const aboutP = document.querySelectorAll('.top-content .text-content p')[1]
-const servicesHeader = document.querySelectorAll('.bottom-content .text-content h4')[0]
-const servicesP = document.querySelectorAll('.bottom-content .text-content p')[0]
-const productHeader = document.querySelectorAll('.bottom-content .text-content h4')[1]
-const productP = document.querySelectorAll('.bottom-content .text-content p')[1]
-const visionHeader = document.querySelectorAll('.bottom-content .text-content h4')[2]
-const visionP = document.querySelectorAll('.bottom-content .text-content p')[2]
+
+const mainContent = document.querySelectorAll('.text-content h4, .text-content p')
+const mainContentArray = Object.values(siteContent["main-content"])
 const middleImg = document.querySelector('.middle-img')
-const contactHeader = document.querySelector('.contact h4')
-const contactStreet = document.querySelectorAll('.contact p')[0]
-const contactPhone = document.querySelectorAll('.contact p')[1]
-const contactEmail = document.querySelectorAll('.contact p')[2]
+
+const contact = document.querySelectorAll('.contact h4, .contact p')
+const contactArray = Object.values(siteContent.contact)
+
 const footerLink = document.querySelector('footer a')
 
 // Adding Text 
@@ -78,16 +75,13 @@ for(let i=0; i < navLinks.length; i++){
 }
 
 // Adding Text to Navigation
-navServices.textContent = 'Services'
-navProduct.textContent = 'Product'
-navVision.textContent = 'Vision'
-navFeatures.textContent = 'Features'
-navAbout.textContent = 'About'
-navContact.textContent = 'Contact'
+navLinks.forEach(function (element, index) {
+  element.textContent = aNavLinkArray[index];
+})
 
 //Adding Text to CTA section
-title.textContent = 'DOM Is Awesome'
-bigBtn.textContent = 'Get Started'
+title.textContent = Object.values(siteContent.cta)[0]
+bigBtn.textContent = siteContent.cta.button
 
 //Add images
 logo.src = 'http://localhost:5500/mocks/img/logo.png'
@@ -95,16 +89,9 @@ codeImg.src = 'http://localhost:5500/mocks/img/cta.png'
 middleImg.src = 'http://localhost:5500/mocks/img/accent.png'
 
 //Adding Text to main-content area
-featureHeader.textContent = 'Features'
-featureP.textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metusscelerisque quis.'
-aboutHeader.textContent = 'About'
-aboutP.textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-servicesHeader.textContent = 'Services'
-servicesP.textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi.Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-productHeader.textContent = 'Product'
-productP.textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
-visionHeader.textContent = 'Vision'
-visionP.textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl.Nullam convallis augue justo, at imperdiet metus scelerisque quis.'
+mainContent.forEach(function(element, index){
+  element.textContent = mainContentArray[index];
+})
 
 // Add text to footer
 contactHeader.textContent = 'Contact'
